@@ -706,6 +706,12 @@ nav a.active:after{
         height: auto;
         bottom: -35px;
     }
+
+    .title_project{
+        display: grid;
+        justify-content: center;
+        
+    }
 }
 
 /* End Media */
