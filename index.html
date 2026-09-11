@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="profile/profile-animation.css">
 </head>
 
 <body>
@@ -61,14 +62,53 @@
       <a href="https://www.facebook.com/share/195BrGNeZU/" aria-label="Facebook">Facebook</a>
     </div>
   </div>
+
   <div class="hero-visual">
-    <div class="glow"></div>
-    <div class="avatar-placeholder">
-      <img src="images/Mahdi_Avatar 1.png" alt="Mahdi Bayani avatar">
-      <!-- <img class="next-img" src="images/Mahdi_Avatar.png" alt="Mahdi Bayani avatar"> -->
+
+      <div class="animated-profile hero-visual ">
+      <div class="ap-glow ap-glow-purple"></div>
+      <div class="ap-glow ap-glow-blue"></div>
+
+      <div class="ap-orbit ap-orbit-1"></div>
+      <div class="ap-orbit ap-orbit-2"></div>
+
+      <div class="ap-card "  id="animatedProfileCard">
+        <div class="ap-image-wrap">
+          <img src="images/Mahdi_Avatar 1.png" alt="Profile photo" class="ap-image">
+        </div>
+
+      <div class="ap-info">
+        <div>
+          <h3>MaHdi BaYani</h3>
+          <p>Web Developer</p>
+        </div>
+          <span class="ap-status" title="Available"></span>
+          <span class="ap-status" title="Available"></span>
+          <span class="ap-status" title="Available"></span>
+      </div>
     </div>
+
+    <div class="ap-floating ap-floating-left">
+      <span style="background-color: #06b6d4;   box-shadow: 0 0 0 5px #1f5d68,
+              0 0 18px #06b6d4;" class="ap-status" title="Available"></span>
+      <div>
+        <strong>Creative</strong>
+        <small>Problem Solver</small>
+      </div>
+    </div>
+
+    <div class="ap-floating ap-floating-right">
+      <span  style="background-color: #7c3aed;   box-shadow: 0 0 0 5px #422c68,
+              0 0 18px #7c3aed;" class="ap-status" title="Available"></span>
+      <div>
+        <strong>Professional</strong>
+        <small>Engineer</small>
+      </div>
+    </div>
+
   </div>
 </section>
+
 <section class="stats">
   <div><strong data-count="3">0</strong><span>Projects</span></div>
   <div><strong data-count="1">0</strong><span>Years Experience</span></div>
@@ -83,6 +123,7 @@
 <!-- End Footer -->
 
 <script src="js/main.js"></script>
+<script src="profile/profile-animation.js"></script>
 
 </body>
 </html>

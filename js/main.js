@@ -9,3 +9,26 @@ const counters=document.querySelectorAll("[data-count]");
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target,target=+el.dataset.count;let n=0;const tick=()=>{n+=Math.ceil(target/50);if(n>=target)el.textContent=target;else{el.textContent=n;requestAnimationFrame(tick)}};tick();obs.unobserve(el)}}),{threshold:.5});
 counters.forEach(c=>obs.observe(c));
 const form=document.getElementById("contactForm");if(form)form.addEventListener("submit",e=>{e.preventDefault();alert("Message form is ready. Connect it to your backend/email service.");});
+
+
+// Start profile
+const profileComponent = document.querySelector(".animated-profile");
+const profileCard = document.querySelector(".ap-card");
+
+if (profileComponent && profileCard) {
+  profileComponent.addEventListener("mousemove", (event) => {
+    const rect = profileComponent.getBoundingClientRect();
+
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    profileCard.style.transform =
+      `perspective(900px) rotateY(${x * 7}deg) rotateX(${y * -7}deg) translateY(-8px)`;
+  });
+
+  profileComponent.addEventListener("mouseleave", () => {
+    profileCard.style.transform = "";
+  });
+}
+
+// End profile
