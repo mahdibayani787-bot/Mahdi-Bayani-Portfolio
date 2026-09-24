@@ -667,7 +667,7 @@ nav a.active:after{
     font-size:3rem;
     font-weight:800;
     background:linear-gradient(135deg,#17134a,#071b2b);
-    color:#a855f7
+    color: #a855f7;
 }
 
 .project a,.card a{
