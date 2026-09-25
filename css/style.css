@@ -774,13 +774,18 @@ nav a.active:after{
 }
 
 @media(max-width:650px){
-    .container{ padding-left:5%; padding-right:5%; }
+    .container{ 
+        padding-left:5%; 
+        padding-right:5%; 
+        width: 100%;
+    }
+
     .hero-visual{ min-height:410px; }
     .hero h1{ font-size:clamp(2.35rem, 12vw, 3.2rem); }
     .title_project{ display:grid; justify-content:center; }
     .welcome-badge{
         margin-bottom: 5%;
-        font-size: larger;
+        font-size: 1rem;
     }
 }
 
