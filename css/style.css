@@ -23,7 +23,7 @@ body{
     background:radial-gradient(circle at 20% 20%,rgba(124,58,237,.13),transparent 30%),var(--bg);
     color:var(--text);
     line-height:1.7;
-     
+    overflow-x: hidden;
     transition:.3s
 }
 body.light{
@@ -144,7 +144,8 @@ nav a.active:after{
 .container{
     max-width:1200px;
     margin:auto;
-    padding:130px 5% 80px
+    padding:130px 5% 80px;
+    width: 100%;
 }
 
 .hero{
@@ -205,6 +206,45 @@ nav a.active:after{
 }
 
 /* Advanced welcome animation */
+
+.welcome-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(12px) scale(.85);
+    filter: blur(5px);
+    animation: welcomeLetter .5s cubic-bezier(.2,.8,.2,1) forwards;
+    animation-delay: calc(var(--i) * 0.045s);
+}
+
+.welcome-space {
+    width: .3em;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+@keyframes welcomeLetter {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(.85);
+        filter: blur(5px);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.04);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+
 .welcome-badge{
     position:relative;
     width:max-content;
@@ -268,7 +308,7 @@ nav a.active:after{
     width:24%;
     transform:skewX(-20deg) translateX(-180%);
     background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);
-    animation:welcomeScan 4.5s 1s ease-in-out infinite;
+    animation:welcomeScan 5.5s 5s ease-in-out infinite;
     pointer-events:none;
 }
 
@@ -738,6 +778,10 @@ nav a.active:after{
     .hero-visual{ min-height:410px; }
     .hero h1{ font-size:clamp(2.35rem, 12vw, 3.2rem); }
     .title_project{ display:grid; justify-content:center; }
+    .welcome-badge{
+        margin-bottom: 5%;
+        font-size: larger;
+    }
 }
 
 @media (hover:none){

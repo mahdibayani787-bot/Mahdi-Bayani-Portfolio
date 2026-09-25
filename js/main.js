@@ -97,3 +97,21 @@ if (profile && profileCard && canTilt) {
     profileCard.style.setProperty("--ap-lift", "0px");
   });
 }
+
+
+
+const welcomeText = document.querySelector('.welcome-text');
+
+if (welcomeText) {
+    const text = welcomeText.textContent;
+
+    welcomeText.innerHTML = [...text]
+        .map((char, index) => {
+            if (char === ' ') {
+                return '<span class="welcome-space">&nbsp;</span>';
+            }
+
+            return `<span style="--i:${index}">${char}</span>`;
+        })
+        .join('');
+}
