@@ -551,7 +551,6 @@ nav a.active:after{
 
 
 .hero-visual{
-    min-height:480px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -776,15 +775,13 @@ nav a.active:after{
     .container{ 
         padding-left:5%; 
         padding-right:5%; 
-        width: 100vw;
+        width: 100vw !important;
         
     }
 
     .hero-visual{
-        width: 100% !important; 
-        min-width: 100% !important;
-        min-height:0 !important;
-
+        width: 90% !important;
+        height: auto;
 
      }
 
